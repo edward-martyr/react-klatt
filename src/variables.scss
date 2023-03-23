@@ -1,0 +1,6 @@
+$content-margin: max(
+  min(((100vw - 30em) / 2), max(25vw, (100vw - 36em) / 2)),
+  1em
+);
+
+$text-indent: min(0.5in, 10%);

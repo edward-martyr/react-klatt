@@ -1,0 +1,62 @@
+@import "./variables";
+
+@font-face {
+  font-family: "Source Sans";
+  src: local("Source Sans 3 VF"), local("Source Sans VF"), local("Source Sans"),
+    url("./static/fonts/SourceSansVF.woff2") format("woff2");
+  font-display: block;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: local("Source Sans 3 VF Italic"), local("Source Sans VF Italic"), local("Source Sans Italic"),
+    url("./static/fonts/SourceSansVF-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip;
+  line-height: 1.5;
+  font-family: "Source Sans", sans-serif;
+  font-size: 15pt;
+
+  #app {
+    position: relative;
+    max-width: 100vw;
+    overflow-x: clip;
+
+    #content {
+      margin-left: $content-margin;
+      margin-right: $content-margin;
+      text-align: justify;
+      text-justify: auto;
+
+      h1 {
+        text-align: start;
+        margin-top: min(max(5vw, 0.5em), 2em);
+        font-size: min(3.6em, 15vw);
+
+        span {
+          background-size: 1px 1em;
+          box-shadow:
+            inset 0 -0.175em #ececed,
+            inset 0 -0.6em #a3c0b4;
+          display: inline;
+          letter-spacing: -0.05ch;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.formant-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  margin: 1em 0;
+  width: 100%;
+
+  .formant-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 1em;
+
+    .formant-range {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex: 2;
+
+      @media (max-width: 500px) {
+        min-width: 100%;
+      }
+
+      .formant-range-label {
+        flex: none;
+        font-size: 70%;
+      }
+
+      .min-formant-range-label {
+        width: var(--min-formant-range-label-width);
+        text-align: right;
+      }
+
+      .formant-range-input {
+        margin: 0 0.5rem;
+        flex: 1;
+
+        .MuiSlider-thumb {
+          width: 0.8em;
+          height: 0.8em;
+        }
+      }
+
+      .max-formant-range-label {
+        text-align: left;
+      }
+    }
+
+    .formant-number {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: fit-content;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+
+      .formant-number-label {
+        flex: none;
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      .formant-number-input {
+        flex: 1;
+        margin: 0 0.1rem;
+        max-width: 8em;
+
+        @media (max-width: 500px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .submit-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 0.5em;
+    margin-top: 1em;
+
+    & > * {
+      flex: 100;
+      flex-wrap: wrap;
+      min-width: max-content;
+    }
+  }
+
+  .MuiAlert-root {
+    font-size: 80%;
+  }
+}
