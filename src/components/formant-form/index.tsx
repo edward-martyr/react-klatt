@@ -25,17 +25,19 @@ const FormantForm = () => {
 
   // This effect is used to set the width of the formant min range labels
   useEffect(() => {
-    const widestFormantMinLabel = (() => {
-      const formantMinLabels = document.querySelectorAll('.min-formant-range-label');
-      let widestLabel = 0;
-      formantMinLabels.forEach((label) => {
-        if (label.clientWidth > widestLabel) {
-          widestLabel = label.clientWidth;
-        }
-      });
-      return widestLabel;
-    })();
-    document.documentElement.style.setProperty('--min-formant-range-label-width', `${widestFormantMinLabel}px`);
+    document.fonts.ready.then(() => {
+      const widestFormantMinLabel = (() => {
+        const formantMinLabels = document.querySelectorAll('.min-formant-range-label');
+        let widestLabel = 0;
+        formantMinLabels.forEach((label) => {
+          if (label.clientWidth > widestLabel) {
+            widestLabel = label.clientWidth;
+          }
+        });
+        return widestLabel;
+      })();
+      document.documentElement.style.setProperty('--min-formant-range-label-width', `${widestFormantMinLabel + 1}px`);
+    });
   }, []);
 
   const handleSubmit = (e: React.MouseEvent) => {

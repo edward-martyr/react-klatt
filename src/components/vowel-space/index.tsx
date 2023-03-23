@@ -173,7 +173,7 @@ const VowelSpace = () => {
     yMaxLabel
       .move(
         formantsToCoordinates({ f2: f2Max }) - yMaxLabel.bbox().height / 2,
-        formantsToCoordinates({ f1: f1Max }) - yMaxLabel.bbox().height * 1.5,
+        formantsToCoordinates({ f1: f1Max }) - (yMaxLabel.bbox().width + yMaxLabel.bbox().height) / 2,
       )
       .font(middleAnchorStyle)
       .rotate(-90);
@@ -181,7 +181,7 @@ const VowelSpace = () => {
     yMinLabel
       .move(
         formantsToCoordinates({ f2: f2Max }) - yMinLabel.bbox().height / 2,
-        formantsToCoordinates({ f1: f1Min }) + yMinLabel.bbox().height / 2,
+        formantsToCoordinates({ f1: f1Min }),
       )
       .font(middleAnchorStyle)
       .rotate(-90);
@@ -197,7 +197,9 @@ const VowelSpace = () => {
   useEffect(() => {
     const container = containerRef.current as HTMLElement;
     if (!container.firstChild) {
-      draw(container);
+      document.fonts.ready.then(() => {
+        draw(container);
+      });
     }
     point?.center(...formantsToCoordinates({ f1, f2 }));
   }, [f1, f2]);
