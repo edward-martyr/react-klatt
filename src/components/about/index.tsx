@@ -23,7 +23,7 @@ const About = () => {
               which are the most phonetically significant ones.
             </li>
             <li>
-              You could enter a theoretically impossible formant value, e.g. F1&ensp;{'>'}&ensp;F2,
+              You could enter a theoretically impossible formant value, e.g. F1 {'>'} F2,
               but the synthesiser will still produce a (strange) sound.
             </li>
             <li>
@@ -45,20 +45,13 @@ const About = () => {
         </AccordionSummary>
         <AccordionDetails>
           <p>
-            Klatt Grid Vowel Synthesis uses <cite>KlattGrid Speech Synthesizer</cite> from praat as its
+            Klatt Grid Vowel Synthesis uses <cite>KlattGrid Speech Synthesizer</cite> from Praat as its
             backend to synthesise vowels.
           </p>
           <ul>
             <li>
               Weenink, D. (2009) <cite>The klattgrid speech synthesizer.</cite> Proc. Interspeech 2009,
-              2059-2062,
-              <span className="sc">doi</span>:{' '}
-              <a href="https://doi.org/10.21437/Interspeech.2009-591"
-                target="_blank"
-                rel="noreferrer"
-              >
-                10.21437/Interspeech.2009-591
-              </a>.
+              2059‒2062, <span className="sc">doi:</span> <a href="https://doi.org/10.21437/Interspeech.2009-591" target="_blank" rel="noreferrer">10.21437/Interspeech.2009-591</a>.
             </li>
           </ul>
         </AccordionDetails>

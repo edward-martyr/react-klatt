@@ -8,7 +8,8 @@
 }
 @font-face {
   font-family: "Source Sans";
-  src: local("Source Sans 3 VF Italic"), local("Source Sans VF Italic"), local("Source Sans Italic"),
+  src: local("Source Sans 3 VF Italic"), local("Source Sans VF Italic"),
+    local("Source Sans Italic"),
     url("./static/fonts/SourceSansVF-Italic.woff2") format("woff2");
   font-style: italic;
   font-display: block;
@@ -50,12 +51,14 @@ body {
 
         span {
           background-size: 1px 1em;
-          box-shadow:
-            inset 0 -0.175em #ececed,
-            inset 0 -0.6em #a3c0b4;
+          box-shadow: inset 0 -0.175em #ececed, inset 0 -0.6em #a3c0b4;
           display: inline;
           letter-spacing: -0.05ch;
         }
+      }
+
+      .sc {
+        font-feature-settings: "smcp";
       }
     }
   }
