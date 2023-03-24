@@ -43,6 +43,19 @@ body {
       margin-right: $content-margin;
       text-align: justify;
       text-justify: auto;
+      @media (max-width: 500px) {
+        text-align: left;
+      }
+
+      p {
+        margin: 0.5em 0;
+        &:first-child {
+          margin-top: 0em;
+        }
+        &:last-child {
+          margin-bottom: 0em;
+        }
+      }
 
       h1 {
         text-align: start;
@@ -50,10 +63,20 @@ body {
         font-size: min(3.6em, 15vw);
 
         span {
-          background-size: 1px 1em;
-          box-shadow: inset 0 -0.175em #ececed, inset 0 -0.6em #a3c0b4;
           display: inline;
+          background: linear-gradient(
+            to top,
+            transparent 10%,
+            $primary-light 10%,
+            $primary-light 40%,
+            transparent 40%,
+            transparent 100%
+          );
           letter-spacing: -0.05ch;
+        }
+        text-align: left;
+        @media (max-width: 500px) {
+          text-align: center;
         }
       }
 

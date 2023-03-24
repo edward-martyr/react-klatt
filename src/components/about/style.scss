@@ -12,6 +12,9 @@
       &:first-child {
         margin-top: 0em;
       }
+      &:last-child {
+        margin-bottom: 0em;
+      }
 
       &::before {
         content: "•";
