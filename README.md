@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Klatt Grid Vowel Synthesis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Frontend
 
-## Available Scripts
+The app is a TypeScript React app using Redux.
 
-In the project directory, you can run:
+### Build
 
-### `npm start`
+```bash
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Run
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm run start
+```
 
-### `npm test`
+## Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The backend repo can be found [here](https://github.com/edward-martyr/klatt-api). It is built with Python and Flask.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Of the various parameters one can pass to the <cite>KlattGrid Speech Synthesizer</cite>, this app exposes the three most important ones: F1, F2 and F3 (the first three formants of a vowel).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Use the sliders or the input fields to change the formant values.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The dot in the vowel space will move according to the F1 and F2 values you enter; this vowel space is only a lossy 2D representation of the vowel, and does not fully capture the vowel’s quality.
 
-### `npm run eject`
+## Reference
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Weenink, D. (2009) <cite>The klattgrid speech synthesizer.</cite> Proc. Interspeech 2009,
+2059‒2062, <span style="font-variant: small-caps;">doi:</span> <a href="https://doi.org/10.21437/Interspeech.2009-591" target="_blank" rel="noreferrer">10.21437/Interspeech.2009-591</a>.
