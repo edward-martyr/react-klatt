@@ -24,7 +24,7 @@ export const vowelSlice = createSlice({
 export const { update, loading } = vowelSlice.actions;
 export const updateVowelByFormants = (formants: FormantsState) => async (dispatch: AppDispatch) => {
   dispatch(loading(true));
-  return fetch('https://klatt-api.nyoeghau.com/', {
+  return fetch('https://klatt-api.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
